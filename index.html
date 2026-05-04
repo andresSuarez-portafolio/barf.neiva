@@ -211,7 +211,7 @@
     </a>
 
     <section class="hero" id="hero">
-        <video id="hero-video" src="assets/video1.mp4" autoplay muted loop playsinline></video>
+<iframe id="hero-video" src="https://www.youtube.com/embed/FH8C0vgTT2Q?autoplay=1&mute=1&loop=1&playlist=FH8C0vgTT2Q&controls=0&modestbranding=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"></iframe>
         <div class="hero-content">
             <h1>BARF<span>NEIVA</span></h1>
             <p>Alimentación Biológicamente Apropiada. Lo mejor de la naturaleza para tu mascota.</p>
@@ -293,11 +293,12 @@
 
         document.querySelectorAll('section, footer').forEach(el => observer.observe(el));
 
-        window.addEventListener('scroll', () => {
-            const video = document.getElementById('hero-video');
-            let offset = window.pageYOffset;
-            video.style.transform = `translateY(${offset * 0.4}px)`;
-        });
+        // Parallax effect disabled for iframe compatibility
+        // window.addEventListener('scroll', () => {
+        //     const video = document.getElementById('hero-video');
+        //     let offset = window.pageYOffset;
+        //     video.style.transform = `translateY(${offset * 0.4}px)`;
+        // });
     </script>
 </body>
 </html>
